@@ -1,16 +1,10 @@
 #include <SDL.h>
-#include "Graphics.h"
+#include "MainGame.h"
 
 int main(int argc, char* argv[]) {
 
-	const int width = 480;
-	const int height = 640;
-
-	Graphics graphics(height, width);
-
-	while (true) {
-
-	}
+	MainGame mainGame;
+	mainGame.play();
 
 	return 0;
 }

@@ -27,9 +27,21 @@
     <ClCompile Include="Graphics.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
+      <Filter>Source Files\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>Source Files\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
       <Filter>Source Files\headers</Filter>
     </ClInclude>
   </ItemGroup>
