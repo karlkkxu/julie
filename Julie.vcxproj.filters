@@ -9,15 +9,17 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Source Files\headers">
-      <UniqueIdentifier>{ccd5b303-69c7-4c90-987a-471ddc287491}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\src">
       <UniqueIdentifier>{e54d74a1-c6df-417d-ab03-8b1112f9a91e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\headers">
+      <UniqueIdentifier>{ccd5b303-69c7-4c90-987a-471ddc287491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{3ecb98bd-05d4-47e3-8aa5-9a72f1b0332c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sprites">
+      <UniqueIdentifier>{bc016162-0f72-4466-b11f-4b999277533f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,16 +35,27 @@
     <ClCompile Include="Input.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
-      <Filter>Source Files\headers</Filter>
+      <Filter>Header Files\headers</Filter>
     </ClInclude>
     <ClInclude Include="MainGame.h">
-      <Filter>Source Files\headers</Filter>
+      <Filter>Header Files\headers</Filter>
     </ClInclude>
     <ClInclude Include="Input.h">
-      <Filter>Source Files\headers</Filter>
+      <Filter>Header Files\headers</Filter>
     </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Header Files\headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="sprites\JulieChar.png">
+      <Filter>Resources\Sprites</Filter>
+    </Image>
   </ItemGroup>
 </Project>

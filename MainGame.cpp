@@ -17,10 +17,14 @@ void MainGame::play()
 	Graphics graphics(1024, 768);
 	Input input;
 
-	while (true) {
+	this->playerSprite = Sprite(graphics, "sprites/JulieChar.png", 0, 0, 16, 16, 100, 100);
+
+	while (true) 
+	{
 		input.beginFrame();
 		
-		if (SDL_PollEvent(&event)) {
+		if (SDL_PollEvent(&event)) 
+		{
 
 			if (event.type == SDL_KEYDOWN && event.key.repeat == 0)
 				input.keyDownEvent(event);
@@ -33,11 +37,17 @@ void MainGame::play()
 
 		}
 
+		this->draw(graphics);
 	}
 }
 
 void MainGame::draw(Graphics& graphics)
 {
+	graphics.clear();
+
+	this->playerSprite.draw(graphics, 100, 100);
+
+	graphics.flip();
 }
 
 void MainGame::update(float elapsedTime)
