@@ -1,7 +1,7 @@
 #ifndef MAINGAME_H
 #define MAINGAME_H
 
-#include "Sprite.h"
+#include "Unit.h"
 
 class Graphics;
 
@@ -15,6 +15,8 @@ public:
 private:
 	void draw(Graphics &graphics);
 	void update(float elapsedTime);
+
+	Unit player;
 };
 
 #endif // !MAINGAME_H

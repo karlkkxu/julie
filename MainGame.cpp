@@ -3,6 +3,8 @@
 #include "Graphics.h"
 #include "Input.h"
 #include "Globals.h"
+#include "Unit.h"
+#include "Sprite.h"
 
 MainGame::MainGame() {
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -18,7 +20,10 @@ void MainGame::play()
 	Graphics graphics(Globals::SCREEN_WIDTH, Globals::SCREEN_HEIGHT);
 	Input input;
 
-
+	//testit
+	Sprite testSprite = Sprite(graphics, "sprites/JulieChar.png", 0, 0, 16, 16);
+	Vec2 testVector = Vec2(100, 100);
+	this->player = Unit(&testSprite, testVector);
 
 	while (true) 
 	{
@@ -45,6 +50,9 @@ void MainGame::play()
 void MainGame::draw(Graphics& graphics)
 {
 	graphics.clear();
+
+	//testit
+	player.drawToBM();
 
 	graphics.flip();
 }

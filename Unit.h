@@ -2,15 +2,20 @@
 #define UNIT_H
 
 #include "Globals.h"
-using namespace Globals;
 
+using namespace Globals;
 class Sprite;
 
+/* class Unit
+	Holds all of the logic in common for characters (units) that can be drawn and interact on a battlemap
+*/
 class Unit
 {
 public:
-
-	Unit(Sprite& sprite, Vec2 BMloc);
+	//Default, should not be used
+	Unit();
+	// Constructor which attaches a sprite and a location 2d vector
+	Unit(Sprite* sprite, Vec2 BMloc);
 
 	void drawToBM();
 

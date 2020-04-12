@@ -1,9 +1,13 @@
 #include "Unit.h"
 #include "Sprite.h"
 
-Unit::Unit(Sprite& sprite, Vec2 BMloc)
+Unit::Unit()
 {
-	this->sprite = &sprite;
+}
+
+Unit::Unit(Sprite* sprite, Vec2 BMloc)
+{
+	this->sprite = sprite;
 	this->BMloc = BMloc;
 }
 
