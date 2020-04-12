@@ -38,6 +38,9 @@
     <ClCompile Include="Sprite.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h">
@@ -52,10 +55,19 @@
     <ClInclude Include="Sprite.h">
       <Filter>Header Files\headers</Filter>
     </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Header Files\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>Header Files\headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="sprites\JulieChar.png">
       <Filter>Resources\Sprites</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Julie.rc" />
   </ItemGroup>
 </Project>

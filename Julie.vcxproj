@@ -87,12 +87,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\devel\SDL2_IMAGE\include;C:\devel\SDL2\include;C:\cpp\devel\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\cpp\devel\SDL2_image-2.0.5\include;C:\devel\SDL2_IMAGE\include;C:\devel\SDL2\include;C:\cpp\devel\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\devel\SDL2_IMAGE\lib\x86;C:\devel\SDL2\lib\x86;C:\cpp\devel\SDL2\lib\x86;%(AdditionalLibraryDirectories);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\cpp\devel\SDL2_image-2.0.5\lib\x86;C:\devel\SDL2_IMAGE\lib\x86;C:\devel\SDL2\lib\x86;C:\cpp\devel\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -149,15 +149,21 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Unit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="MainGame.h" />
+    <ClInclude Include="Globals.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Unit.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="sprites\JulieChar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Julie.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

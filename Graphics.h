@@ -14,17 +14,25 @@ public:
 	Graphics(int width, int height);
 	~Graphics();
 
-	// Loads the image into the spriteMap
+	/*
+	* Loads the image into the spriteMap
+	*/
 	SDL_Surface* loadImage(const std::string& filePath);
 
-	// Draws the specified texture to the renderer
-	// Source, where the texture is from; sourceArea, which part of the file we take the texture from; destinationArea, where on the screen it is drawn
+	/*
+	* Draws the specified texture to the renderer
+	* Source, where the texture is from; sourceArea, which part of the file we take the texture from; destinationArea, where on the screen it is drawn
+	*/
 	void drawSurface(SDL_Texture* texture, SDL_Rect* sourceArea, SDL_Rect* destinationArea);
 
-	// Takes from the renderer and draws to the screen
+	/*
+	* Takes from the renderer and draws to the screen
+	*/
 	void flip();
 
-	// Clears the renderer
+	/*
+	* Clears the renderer
+	*/
 	void clear();
 
 	// Returns the renderer

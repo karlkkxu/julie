@@ -1,7 +1,2 @@
-﻿  Graphics.cpp
-  MainGame.cpp
-  Sprite.cpp
-  main.cpp
-  Generating Code...
-  LINK : C:\Julie\Debug\Julie.exe not found or not built by the last incremental link; performing full link
-  Julie.vcxproj -> C:\Julie\Debug\Julie.exe
+﻿  Unit.cpp
+  Julie.vcxproj -> C:\cpp\julie\Julie\julie\Debug\Julie.exe

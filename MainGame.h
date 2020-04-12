@@ -15,8 +15,6 @@ public:
 private:
 	void draw(Graphics &graphics);
 	void update(float elapsedTime);
-
-	Sprite playerSprite;
 };
 
 #endif // !MAINGAME_H

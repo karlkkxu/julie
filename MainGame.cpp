@@ -2,6 +2,7 @@
 #include "MainGame.h"
 #include "Graphics.h"
 #include "Input.h"
+#include "Globals.h"
 
 MainGame::MainGame() {
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -14,10 +15,10 @@ MainGame::~MainGame() {
 void MainGame::play()
 {
 	SDL_Event event;
-	Graphics graphics(1024, 768);
+	Graphics graphics(Globals::SCREEN_WIDTH, Globals::SCREEN_HEIGHT);
 	Input input;
 
-	this->playerSprite = Sprite(graphics, "sprites/JulieChar.png", 0, 0, 16, 16, 100, 100);
+
 
 	while (true) 
 	{
@@ -44,8 +45,6 @@ void MainGame::play()
 void MainGame::draw(Graphics& graphics)
 {
 	graphics.clear();
-
-	this->playerSprite.draw(graphics, 100, 100);
 
 	graphics.flip();
 }
