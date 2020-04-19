@@ -1,20 +1,25 @@
 #ifndef BATTLEMAP_H
 #define BATTLEMAP_H
 
-#include "Graphics.h"
 #include "Grid.h"
+#include "Graphics.h"
 
 //TODO: Scalable size for the map grid
+//TODO: Magic numbers
 class BattleMap
 {
 public:
-
-	BattleMap(Graphics& graphics);
+	BattleMap();
+	BattleMap(Graphics* graphics);
+	~BattleMap();
 
 	void generateBlankMap();
+
+	void drawMap();
 private:
+	Sprite sprites[20];
 	Graphics* graphics;
-	Grid battlemap[5][5];
+	Grid battlemap[10][10];
 };
 
 

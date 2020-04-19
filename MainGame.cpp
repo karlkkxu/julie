@@ -1,17 +1,13 @@
-#include "SDL.h"
 #include "MainGame.h"
-#include "Graphics.h"
-#include "Input.h"
-#include "Globals.h"
-#include "Unit.h"
-#include "Sprite.h"
 
-MainGame::MainGame() {
+
+MainGame::MainGame() 
+{
 	SDL_Init(SDL_INIT_EVERYTHING);
 }
 
-MainGame::~MainGame() {
-
+MainGame::~MainGame() 
+{
 }
 
 void MainGame::play()
@@ -21,6 +17,8 @@ void MainGame::play()
 	Input input;
 
 	//testit
+	this->testBM = BattleMap(&graphics);
+	testBM.generateBlankMap();
 	Sprite testSprite = Sprite(graphics, "sprites/JulieChar.png", 0, 0, 16, 16);
 	Vec2 testVector = Vec2(100, 100);
 	this->player = Unit(&testSprite, testVector);
@@ -51,8 +49,9 @@ void MainGame::draw(Graphics& graphics)
 {
 	graphics.clear();
 
-	//testit
+	////testit
 	player.drawToBM();
+	this->testBM.drawMap();
 
 	graphics.flip();
 }

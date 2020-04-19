@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="sprites\JulieChar.png" />
+    <Image Include="sprites\testDot.png" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Julie.rc" />

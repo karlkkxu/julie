@@ -7,8 +7,6 @@
 
 Sprite::Sprite()
 {
-	std::cout << "Nyt vittu Otto";	
-	delete this;
 }
 
 Sprite::Sprite(Graphics& graphics, const std::string& filePath, int sourceX, int sourceY, int width, int height, float posX, float posY)
@@ -48,6 +46,29 @@ Sprite::Sprite(Graphics& graphics, const std::string& filePath, int sourceX, int
 	try
 	{
 		this->spriteMap = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage(filePath));
+	}
+	catch (...)
+	{
+		printf("error loading sprite file");
+	}
+}
+
+Sprite::Sprite(Graphics* graphics, const std::string& filePath, int sourceX, int sourceY, int width, int height)
+{
+	//should not be needed when using this constructor
+	this->x = 0;
+	this->y = 0;
+
+	this->sourceRect.x = sourceX;
+	this->sourceRect.y = sourceY;
+	this->sourceRect.w = width;
+	this->sourceRect.h = height;
+
+	this->graphics = graphics;
+
+	try
+	{
+		this->spriteMap = SDL_CreateTextureFromSurface(graphics->getRenderer(), graphics->loadImage(filePath));
 	}
 	catch (...)
 	{

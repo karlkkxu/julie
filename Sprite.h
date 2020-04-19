@@ -24,6 +24,12 @@ public:
 	*/
 	Sprite(Graphics& graphics, const std::string& filePath, int sourceX, int sourceY, int width, int height);
 
+	/* Sprite constructor with pointer
+	* attaches the new sprite to the graphics class, takes in the filepath and coords of the sprite texture,
+	* does not determine the location of the sprite on the screen
+	*/
+	Sprite(Graphics* graphics, const std::string& filePath, int sourceX, int sourceY, int width, int height);
+
 	virtual ~Sprite();
 	virtual void update();
 

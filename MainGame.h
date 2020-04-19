@@ -1,6 +1,14 @@
 #ifndef MAINGAME_H
 #define MAINGAME_H
 
+
+#include "SDL.h"
+#include "Graphics.h"
+#include "Input.h"
+#include "Globals.h"
+#include "Unit.h"
+#include "Sprite.h"
+#include "BattleMap.h"
 #include "Unit.h"
 
 class Graphics;
@@ -16,6 +24,8 @@ private:
 	void draw(Graphics &graphics);
 	void update(float elapsedTime);
 
+	//testit
+	BattleMap testBM;
 	Unit player;
 };
 
