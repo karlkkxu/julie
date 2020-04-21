@@ -36,10 +36,11 @@ void MainGame::play()
 			else if (event.type == SDL_KEYUP)
 				input.keyUpEvent(event);
 
-			if (input.keyPressed(SDL_SCANCODE_ESCAPE))
-				return;
-
+			else if (event.type == SDL_MOUSEBUTTONDOWN)
+				input.mouseDownEvent(event);
 		}
+
+		this->resolve(input);
 
 		this->draw(graphics);
 	}
@@ -49,13 +50,36 @@ void MainGame::draw(Graphics& graphics)
 {
 	graphics.clear();
 
-	////testit
-	player.drawToBM();
+	//testit
 	this->testBM.drawMap();
+	player.drawToBM();
 
 	graphics.flip();
 }
 
 void MainGame::update(float elapsedTime)
+{
+}
+
+void MainGame::resolve(Input input)
+{
+	if (&input.getMouseEvent() != NULL)
+		handleMouseEvent(input.getMouseEvent());
+
+	if (input.getPressedKeysMAP().empty())
+		handlePressedKeys(input);
+}
+
+void MainGame::handleMouseEvent(SDL_MouseButtonEvent input)
+{
+	//TODO more variations and considerations for different contexts of press
+
+	
+	Vec2 loc = Vec2(input.x, input.y);
+	this->player.setBMloc(loc);
+
+}
+
+void MainGame::handlePressedKeys(Input input)
 {
 }

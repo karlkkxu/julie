@@ -24,7 +24,7 @@ Unit::Unit(Sprite* sprite)
 void Unit::drawToBM()
 {
 	if (this->grid != NULL)
-		this->updateBMloc();
+		 this->updateBMloc();
 	this->sprite->draw(this->BMloc);
 }
 

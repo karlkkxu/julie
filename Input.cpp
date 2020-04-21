@@ -18,6 +18,11 @@ void Input::keyDownEvent(SDL_Event& event)
 	this->heldKeys[event.key.keysym.scancode] = true;
 }
 
+void Input::mouseDownEvent(SDL_Event event)
+{
+	this->mouseEvent = event.button;
+}
+
 bool Input::keyPressed(SDL_Scancode key)
 {
 	return pressedKeys[key];
@@ -31,4 +36,24 @@ bool Input::keyReleased(SDL_Scancode key)
 bool Input::keyHeld(SDL_Scancode key)
 {
 	return heldKeys[key];
+}
+
+std::map<SDL_Scancode, bool> Input::getHeldKeysMAP()
+{
+	return this->heldKeys;
+}
+
+std::map<SDL_Scancode, bool> Input::getPressedKeysMAP()
+{
+	return this->pressedKeys;
+}
+
+std::map<SDL_Scancode, bool> Input::getReleasedKeysMAP()
+{
+	return this->releasedKeys;
+}
+
+SDL_MouseButtonEvent Input::getMouseEvent()
+{
+	return this->mouseEvent;
 }
