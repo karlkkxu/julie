@@ -9,7 +9,7 @@
 class Input {
 public:
 
-	//Clears the maps of pressed or released keys, not relevant
+	//Clears the maps of pressed or released keys, which are not relevant
 	void beginFrame();
 
 	//Registers the changes to held and released keymaps
@@ -33,7 +33,7 @@ public:
 	std::map<SDL_Scancode, bool> getHeldKeysMAP();
 	std::map<SDL_Scancode, bool> getPressedKeysMAP();
 	std::map<SDL_Scancode, bool> getReleasedKeysMAP();
-	SDL_MouseButtonEvent getMouseEvent();
+	SDL_MouseButtonEvent* getMouseEvent();
 
 private:
 
@@ -45,6 +45,7 @@ private:
 	std::map<SDL_Scancode, bool> releasedKeys;
 
 	SDL_MouseButtonEvent mouseEvent;
+	SDL_MouseButtonEvent* mouseEventPTR;
 
 };
 

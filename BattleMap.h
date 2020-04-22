@@ -22,5 +22,4 @@ private:
 	Grid battlemap[10][10];
 };
 
-
 #endif // !BATTLEMAP_H

@@ -1,6 +1,5 @@
 #include "BattleMap.h"
 
-
 BattleMap::BattleMap()
 {
 }

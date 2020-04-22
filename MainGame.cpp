@@ -63,23 +63,47 @@ void MainGame::update(float elapsedTime)
 
 void MainGame::resolve(Input input)
 {
-	if (&input.getMouseEvent() != NULL)
+	if (input.getMouseEvent() != NULL)
 		handleMouseEvent(input.getMouseEvent());
 
-	if (input.getPressedKeysMAP().empty())
-		handlePressedKeys(input);
+	if (input.getPressedKeysMAP().empty() == false)
+		handlePressedKeys(input.getPressedKeysMAP());
 }
 
-void MainGame::handleMouseEvent(SDL_MouseButtonEvent input)
+void MainGame::handleMouseEvent(SDL_MouseButtonEvent* input)
 {
 	//TODO more variations and considerations for different contexts of press
 
 	
-	Vec2 loc = Vec2(input.x, input.y);
+	Vec2 loc = Vec2(input->x, input->y);
 	this->player.setBMloc(loc);
 
 }
 
-void MainGame::handlePressedKeys(Input input)
+void MainGame::handlePressedKeys(std::map<SDL_Scancode, bool> input)
 {
+	for (std::map<SDL_Scancode, bool>::iterator it = input.begin(); it != input.end(); it++)
+	{
+		bool pressed = it->second;
+		if (pressed)
+		{
+			this->handlePressedKey(it->first);
+		}
+	}
+}
+
+void MainGame::handlePressedKey(SDL_Scancode key)
+{
+	SDL_Keycode keyTest = SDL_GetKeyFromScancode(key);
+	switch (keyTest)
+	{
+	case SDLK_ESCAPE: 
+	{
+		Vec2 loc = Vec2(20, 20);
+		this->player.setBMloc(loc);
+		;
+	}
+	default:
+		break;
+	}
 }

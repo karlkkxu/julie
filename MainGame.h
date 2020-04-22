@@ -24,8 +24,9 @@ private:
 	void update(float elapsedTime);
 
 	void resolve(Input input);
-	void handleMouseEvent(SDL_MouseButtonEvent input);
-	void handlePressedKeys(Input input);
+	void handleMouseEvent(SDL_MouseButtonEvent* input);
+	void handlePressedKeys(std::map<SDL_Scancode, bool> input);
+	void handlePressedKey(SDL_Scancode key);
 
 	//testit
 	BattleMap testBM;

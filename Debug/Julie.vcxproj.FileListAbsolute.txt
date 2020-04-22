@@ -1,0 +1,2 @@
+C:\Julie\Debug\Julie.exe
+C:\Julie\Debug\Julie.pdb
