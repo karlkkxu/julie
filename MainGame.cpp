@@ -97,13 +97,13 @@ void MainGame::handlePressedKey(SDL_Scancode key)
 	SDL_Keycode keyTest = SDL_GetKeyFromScancode(key);
 	switch (keyTest)
 	{
-	case SDLK_ESCAPE: 
-	{
-		Vec2 loc = Vec2(20, 20);
-		this->player.setBMloc(loc);
-		;
-	}
-	default:
-		break;
+		case SDLK_ESCAPE: 
+		{
+			Vec2 loc = Vec2(20, 20);
+			this->player.setBMloc(loc);
+			;
+		}
+		default:
+			break;
 	}
 }
